@@ -1,0 +1,27 @@
+class Solution {
+public:
+    int reverse(int x) {
+        int reverse=0;
+        
+
+        while(x!=0){
+            int last_digit=x%10;
+            x=x/10;
+            // Check for positive overflow before multiplying by 10
+            if (reverse > INT_MAX / 10 || (reverse == INT_MAX / 10 && last_digit> 7)) {
+                return 0;
+            }
+            // Check for negative underflow before multiplying by 10
+            if (reverse < INT_MIN / 10 || (reverse == INT_MIN / 10 && last_digit < -8)) {
+                return 0;
+            }
+            reverse=(reverse*10)+last_digit;
+           
+        }
+        return reverse;
+
+         
+
+        
+    }
+};
