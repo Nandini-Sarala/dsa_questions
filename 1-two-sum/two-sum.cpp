@@ -14,6 +14,23 @@ public:
             }
         }
         return sum;
+        // int l=0;
+        // int r=nums.size()-1;
+        // vector<int>pair={};
+        // while(l<r){
+        //     if(nums[l]+nums[r]<target){
+        //         l++;
+                
+        //     }
+        //     else if(nums[l]+nums[r]>target){
+        //         r--;
+        //     }
+        //     else{
+        //         pair={l,r};
+        //     }
+
+        // }
+        // return pair;
         
     }
 };
