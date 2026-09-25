@@ -2,7 +2,7 @@ class Solution {
 public:
     bool isPalindrome(string s) {
         erase_if(s,[](unsigned char c){return !isalnum(c);});
-        transform(s.begin(), s.end(), s.begin(), ::tolower);
+        transform(s.begin(), s.end(), s.begin(), [](unsigned char c){return ::tolower(c);});
         int i=0;
         int j=s.size()-1;
         while(i<=j){
